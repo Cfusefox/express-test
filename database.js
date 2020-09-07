@@ -13,4 +13,17 @@ const ArticleSchema = new mongoose.Schema({
     content: String
 })
 mongoose.model('Article', ArticleSchema)
+
+const ProductScheme = new mongoose.Schema({
+    product: String,
+    description: String
+})
+mongoose.model('Product', ProductScheme)
+
+const InventoryScheme = new mongoose.Schema({
+    sku: String,
+    product: String,
+    instock: String
+})
+mongoose.model('Inventory', InventoryScheme)
 module.exports = db;
